@@ -1,0 +1,177 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin-top: 0;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.background {
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background .card {
+  display: flex;
+  background-color: white;
+  width: 731px;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 10px 30px 30px hsl(212, 38%, 91%);
+}
+.background .card__img {
+  flex-shrink: 0;
+  width: 285px;
+  border-radius: 10px 0px 0px 10px;
+  background-image: url("/images/drawers.jpg");
+  background-size: cover;
+}
+.background .card__article {
+  padding: 40px;
+  padding-top: 33px;
+}
+.background .card__article h2 {
+  font-size: 20px;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 0px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+.background .card__article__text {
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.background .card__article__personData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background .card__article__personData__personContainer {
+  display: flex;
+}
+.background .card__article__personData__personContainer img {
+  height: 39px;
+  border-radius: 50%;
+}
+.background .card__article__personData__personContainer__nameAndBirthday {
+  padding-left: 17px;
+}
+.background .card__article__personData__personContainer__nameAndBirthday .name {
+  margin-bottom: 2px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.background .card__article__personData__personContainer__nameAndBirthday .birthday {
+  color: hsl(212, 23%, 69%);
+  margin-bottom: 6px;
+}
+.background .card__article__personData__linksContainer {
+  position: relative;
+}
+.background .card__article__personData__linksContainer__linksButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
+}
+.background .card__article__personData__linksContainer .visible {
+  opacity: 1;
+}
+.background .card__article__personData__linksContainer .open {
+  background-color: hsl(217, 19%, 35%);
+}
+.background .card__article__personData__linksContainer .open svg path {
+  fill: white;
+}
+.background .card__article__personData__linksContainer__linksModal {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  left: -108px;
+  top: -82px;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  transition: all 0.13s ease-in-out;
+}
+.background .card__article__personData__linksContainer__linksModal .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 247px;
+  height: 54px;
+  box-shadow: 5px 10px 15px hsl(210, 3%, 75%);
+  border-radius: 10px;
+  background-color: hsl(217, 19%, 35%);
+}
+.background .card__article__personData__linksContainer__linksModal .modal__boxForLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background .card__article__personData__linksContainer__linksModal .modal__boxForLinks p {
+  display: inline-block;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+.background .card__article__personData__linksContainer__linksModal .modal__boxForLinks img {
+  padding-left: 16px;
+}
+.background .card__article__personData__linksContainer__linksModal .modalArrow {
+  width: 0;
+  height: 0;
+  border-top: 12px solid hsl(217, 19%, 35%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+@media screen and (max-width: 420px) {
+  .background .card {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
