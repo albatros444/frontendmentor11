@@ -111,15 +111,14 @@ input {
   height: 32px;
   border-radius: 50%;
   padding-bottom: 2px;
-  margin-bottom: 5px;
   background-color: hsl(210, 46%, 95%);
   cursor: pointer;
 }
-.background .card__article__personData__linksContainer .visible {
+.background .card__article__personData__linksContainer .visibleDesktop {
   opacity: 1;
 }
 .background .card__article__personData__linksContainer .open {
-  background-color: hsl(217, 19%, 35%);
+  background-color: hsl(214, 17%, 51%);
 }
 .background .card__article__personData__linksContainer .open svg path {
   fill: white;
@@ -132,7 +131,6 @@ input {
   top: -82px;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
   transition: all 0.13s ease-in-out;
 }
 .background .card__article__personData__linksContainer__linksModal .modal {
@@ -155,10 +153,13 @@ input {
   margin-bottom: 0px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  user-select: none;
   color: hsl(212, 23%, 69%);
+  font-weight: 400;
 }
 .background .card__article__personData__linksContainer__linksModal .modal__boxForLinks img {
   padding-left: 16px;
+  user-select: none;
 }
 .background .card__article__personData__linksContainer__linksModal .modalArrow {
   width: 0;
@@ -167,10 +168,94 @@ input {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
 }
+.background .card__modalForMobile {
+  display: none;
+}
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 765px) {
   .background .card {
     flex-direction: column;
+    width: 327px;
+    height: 513px;
+    position: relative;
+    overflow: hidden;
+  }
+  .background .card__img {
+    width: 327px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    background-position: 20% 26%;
+  }
+  .background .card__article {
+    padding: 32px;
+    padding-top: 37px;
+    padding-bottom: 0px;
+  }
+  .background .card__article h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: 800;
+  }
+  .background .card__article__text {
+    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: 33px;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+  }
+  .background .card__article__personData__linksContainer .visibleDesktop {
+    opacity: 0;
+  }
+  .background .card .visibleMobile {
+    opacity: 1;
+    top: 440px;
+  }
+  .background .card__modalForMobile {
+    position: absolute;
+    top: 515px;
+    opacity: 0;
+    width: 327px;
+    height: 72px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 31px;
+    padding-right: 31px;
+    background-color: hsl(217, 19%, 35%);
+    transition: all 0.13s ease-in-out;
+  }
+  .background .card__modalForMobile__boxForLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background .card__modalForMobile__boxForLinks p {
+    display: inline-block;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(212, 23%, 69%);
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .background .card__modalForMobile__boxForLinks img {
+    padding-left: 16px;
+    user-select: none;
+  }
+  .background .card__modalForMobile__linksButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+  }
+  .background .card__modalForMobile__linksButton svg path {
+    fill: white;
   }
 }
 

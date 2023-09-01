@@ -13,7 +13,6 @@
     width: 731px;
     height: 280px;
     border-radius: 10px;
-
     box-shadow: 10px 30px 30px hsl(212, 38%, 91%);
     &__img {
       flex-shrink: 0;
@@ -74,15 +73,14 @@
             height: 32px;
             border-radius: 50%;
             padding-bottom: 2px;
-            margin-bottom: 5px;
             background-color: hsl(210, 46%, 95%);
             cursor: pointer;
           }
-          .visible {
+          .visibleDesktop {
             opacity: 1;
           }
           .open {
-            background-color: hsl(217, 19%, 35%);
+            background-color: hsl(214, 17%, 51%);
             svg {
               path {
                 fill: white;
@@ -97,7 +95,6 @@
             top: -82px;
             flex-direction: column;
             align-items: center;
-            pointer-events: none;
 
             transition: all 0.13s ease-in-out;
 
@@ -110,6 +107,7 @@
               box-shadow: 5px 10px 15px hsl(210, 3%, 75%);
               border-radius: 10px;
               background-color: hsl(217, 19%, 35%);
+
               &__boxForLinks {
                 display: flex;
                 justify-content: center;
@@ -119,10 +117,13 @@
                   margin-bottom: 0px;
                   text-transform: uppercase;
                   letter-spacing: 5px;
+                  user-select: none;
                   color: hsl(212, 23%, 69%);
+                  font-weight: 400;
                 }
                 img {
                   padding-left: 16px;
+                  user-select: none;
                 }
               }
             }
@@ -136,6 +137,9 @@
           }
         }
       }
+    }
+    &__modalForMobile {
+      display: none;
     }
   }
 }

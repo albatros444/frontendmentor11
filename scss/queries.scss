@@ -1,7 +1,97 @@
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 765px) {
   .background {
     .card {
       flex-direction: column;
+      width: 327px;
+      height: 513px;
+      position: relative;
+      overflow: hidden;
+      &__img {
+        width: 327px;
+        height: 200px;
+        border-radius: 10px 10px 0 0;
+        background-position: 20% 26%;
+      }
+      &__article {
+        padding: 32px;
+        padding-top: 37px;
+        padding-bottom: 0px;
+        h2 {
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0;
+          font-weight: 800;
+        }
+        &__text {
+          font-weight: 500;
+          margin-top: 12px;
+          margin-bottom: 33px;
+          line-height: 1.55;
+          letter-spacing: 0.02em;
+        }
+        &__personData {
+          &__linksContainer {
+            .visibleDesktop {
+              opacity: 0;
+            }
+            &__linksModal {
+            }
+          }
+        }
+      }
+      .visibleMobile {
+        opacity: 1;
+        top: 440px;
+      }
+      &__modalForMobile {
+        position: absolute;
+        top: 515px;
+        opacity: 0;
+        width: 327px;
+        height: 72px;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 31px;
+        padding-right: 31px;
+        background-color: hsl(217, 19%, 35%);
+        transition: all 0.13s ease-in-out;
+        &__boxForLinks {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            display: inline-block;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: hsl(212, 23%, 69%);
+            font-size: 12px;
+            font-weight: 400;
+          }
+          img {
+            padding-left: 16px;
+            user-select: none;
+          }
+        }
+
+        &__linksButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: hsl(214, 17%, 51%);
+          cursor: pointer;
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
     }
   }
 }
